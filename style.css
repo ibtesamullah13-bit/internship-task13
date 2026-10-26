@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #fce7f3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+    color: #4338ca;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px #e0e7ff;
+}
+
+button {
+    padding: 11px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #3730a3;
+    transform: translateY(-1px);
+}
+
+.strength-bar {
+    height: 9px;
+    width: 100%;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+#strengthFill {
+    height: 100%;
+    width: 0;
+    background: #9ca3af;
+    border-radius: 10px;
+    transition: width 0.35s ease, background 0.35s ease;
+}
+
+#strengthMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 23px 0 12px;
+    color: #333;
+}
+
+.requirements {
+    list-style: none;
+}
+
+.requirements li {
+    font-size: 14px;
+    color: #dc2626;
+    margin: 10px 0;
+}
+
+.requirements li.valid {
+    color: #16a34a;
+}
+
+#matchMessage {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#matchMessage.match {
+    color: #16a34a;
+}
+
+#matchMessage.no-match {
+    color: #dc2626;
+}
+
+.reset {
+    width: 100%;
+    margin-top: 18px;
+    background: #6b7280;
+}
+
+.reset:hover {
+    background: #4b5563;
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    button {
+        padding: 11px 10px;
+    }
+}

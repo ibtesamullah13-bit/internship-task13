@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Password Strength Checker</h1>
+        <p class="subtitle">Create a strong and secure password</p>
+
+        <label for="password">Enter Password</label>
+        <div class="input-group">
+            <input type="password" id="password"
+                   placeholder="Enter your password">
+            <button type="button" id="togglePassword">Show</button>
+        </div>
+
+        <div class="strength-bar">
+            <div id="strengthFill"></div>
+        </div>
+        <p id="strengthMessage" aria-live="polite">
+            Enter a password to check its strength
+        </p>
+
+        <h3>Password Requirements</h3>
+        <ul class="requirements">
+            <li id="length">○ At least 8 characters</li>
+            <li id="uppercase">○ One uppercase letter (A-Z)</li>
+            <li id="lowercase">○ One lowercase letter (a-z)</li>
+            <li id="number">○ One number (0-9)</li>
+            <li id="special">○ One special character (@, #, !)</li>
+        </ul>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword"
+               placeholder="Re-enter your password">
+
+        <p id="matchMessage" aria-live="polite"></p>
+
+        <button type="button" id="resetButton" class="reset">
+            Reset
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
